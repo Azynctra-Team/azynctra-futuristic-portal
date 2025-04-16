@@ -1,7 +1,6 @@
 
 import { useState } from 'react';
 import { Settings, Database, Briefcase, Smartphone, PenTool, Bot } from 'lucide-react';
-import { Card } from '@/components/ui/card';
 
 const ServiceCard = ({ 
   title, 
@@ -17,8 +16,8 @@ const ServiceCard = ({
   const [isHovered, setIsHovered] = useState(false);
   
   return (
-    <Card 
-      className={`p-6 bg-background/50 hover:bg-card/50 transition-colors duration-300 opacity-0 animate-fade-in`}
+    <div 
+      className={`p-6 bg-transparent hover:bg-muted/10 transition-colors duration-300 opacity-0 animate-fade-in rounded-lg`}
       style={{ animationDelay: `${delay}s` }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -28,7 +27,7 @@ const ServiceCard = ({
       </div>
       <h3 className="text-xl font-semibold mb-2 transition-colors">{title}</h3>
       <p className="text-foreground/70">{description}</p>
-    </Card>
+    </div>
   );
 };
 

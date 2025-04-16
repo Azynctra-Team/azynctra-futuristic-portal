@@ -1,8 +1,6 @@
 
-import { useState } from 'react';
-import { Card } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Quote } from 'lucide-react';
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 type Testimonial = {
   id: number;
@@ -15,7 +13,7 @@ type Testimonial = {
 
 const TestimonialCard = ({ testimonial, delay = 0 }: { testimonial: Testimonial; delay?: number }) => {
   return (
-    <Card className="p-6 bg-background/50 hover:bg-card/50 transition-colors duration-300 opacity-0 animate-fade-in" style={{ animationDelay: `${delay}s` }}>
+    <div className="p-6 bg-transparent hover:bg-muted/10 transition-colors duration-300 opacity-0 animate-fade-in rounded-lg" style={{ animationDelay: `${delay}s` }}>
       <div className="mb-4 text-primary/80">
         <Quote className="h-6 w-6" />
       </div>
@@ -32,13 +30,11 @@ const TestimonialCard = ({ testimonial, delay = 0 }: { testimonial: Testimonial;
           <p className="text-sm text-foreground/60">{testimonial.role}, {testimonial.company}</p>
         </div>
       </div>
-    </Card>
+    </div>
   );
 };
 
 const TestimonialsSection = () => {
-  const [activeIndex] = useState(0);
-  
   const testimonials: Testimonial[] = [
     {
       id: 1,

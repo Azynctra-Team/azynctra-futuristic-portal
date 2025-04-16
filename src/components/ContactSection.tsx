@@ -1,7 +1,6 @@
 
 import { Facebook, Linkedin, Mail, Phone, MapPin, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useState } from 'react';
@@ -80,7 +79,7 @@ const ContactSection = () => {
 
         <div className="grid lg:grid-cols-5 gap-8">
           <div className="lg:col-span-2 space-y-8 opacity-0 animate-fade-in" style={{animationDelay: '0.3s'}}>
-            <Card className="p-6 border-border/40">
+            <div className="p-6 bg-transparent rounded-lg border border-border/40">
               <h3 className="text-xl font-semibold mb-4">Connect With Us</h3>
               
               <div className="space-y-4">
@@ -114,11 +113,11 @@ const ContactSection = () => {
                   ))}
                 </div>
               </div>
-            </Card>
+            </div>
           </div>
 
           <div className="lg:col-span-3 opacity-0 animate-fade-in" style={{animationDelay: '0.6s'}}>
-            <Card className="p-6 border-border/40">
+            <div className="p-6 bg-transparent rounded-lg border border-border/40">
               <h3 className="text-xl font-semibold mb-4">Send Us a Message</h3>
               
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -134,6 +133,7 @@ const ContactSection = () => {
                       value={formState.name}
                       onChange={handleChange}
                       required
+                      className="bg-transparent border-border"
                     />
                   </div>
                   <div className="space-y-2">
@@ -148,6 +148,7 @@ const ContactSection = () => {
                       value={formState.email}
                       onChange={handleChange}
                       required
+                      className="bg-transparent border-border"
                     />
                   </div>
                 </div>
@@ -163,13 +164,14 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     rows={5}
+                    className="bg-transparent border-border"
                   />
                 </div>
                 <Button type="submit" className="w-full">
                   Send Message
                 </Button>
               </form>
-            </Card>
+            </div>
           </div>
         </div>
       </div>

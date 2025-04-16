@@ -1,6 +1,5 @@
 
 import { ArrowUpRight } from 'lucide-react';
-import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
 const ProductCard = ({
@@ -17,8 +16,8 @@ const ProductCard = ({
   delay?: number;
 }) => {
   return (
-    <Card className="overflow-hidden flex flex-col h-full bg-background/50 hover:bg-card/50 transition-colors duration-300 opacity-0 animate-fade-in" style={{ animationDelay: `${delay}s` }}>
-      <div className="h-56 overflow-hidden">
+    <div className="bg-transparent overflow-hidden flex flex-col h-full opacity-0 animate-fade-in transition-all duration-300 hover:translate-y-[-5px]" style={{ animationDelay: `${delay}s` }}>
+      <div className="h-56 overflow-hidden rounded-lg">
         <img 
           src={image} 
           alt={title} 
@@ -35,7 +34,7 @@ const ProductCard = ({
           </a>
         </Button>
       </div>
-    </Card>
+    </div>
   );
 };
 
