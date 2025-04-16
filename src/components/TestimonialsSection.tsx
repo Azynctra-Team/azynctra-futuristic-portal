@@ -15,15 +15,15 @@ type Testimonial = {
 
 const TestimonialCard = ({ testimonial, delay = 0 }: { testimonial: Testimonial; delay?: number }) => {
   return (
-    <Card className="p-6 border-border/40 opacity-0 animate-fade-in card-hover" style={{ animationDelay: `${delay}s` }}>
-      <div className="mb-4 text-primary">
-        <Quote className="h-8 w-8" />
+    <Card className="p-6 bg-background/50 hover:bg-card/50 transition-colors duration-300 opacity-0 animate-fade-in" style={{ animationDelay: `${delay}s` }}>
+      <div className="mb-4 text-primary/80">
+        <Quote className="h-6 w-6" />
       </div>
       <blockquote className="text-lg text-foreground/80 mb-6">
         "{testimonial.content}"
       </blockquote>
       <div className="flex items-center">
-        <Avatar className="h-12 w-12 border-2 border-primary/30">
+        <Avatar className="h-12 w-12">
           <AvatarImage src={testimonial.avatar} alt={testimonial.author} />
           <AvatarFallback>{testimonial.author.substring(0, 2)}</AvatarFallback>
         </Avatar>

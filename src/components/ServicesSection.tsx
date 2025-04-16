@@ -18,13 +18,13 @@ const ServiceCard = ({
   
   return (
     <Card 
-      className={`p-6 card-hover opacity-0 animate-fade-in ${isHovered ? 'bg-gradient-to-br from-azynctra-muted to-background border-primary/40' : 'bg-card border-border/40'}`}
+      className={`p-6 bg-background/50 hover:bg-card/50 transition-colors duration-300 opacity-0 animate-fade-in`}
       style={{ animationDelay: `${delay}s` }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className={`p-3 rounded-lg w-fit mb-4 ${isHovered ? 'bg-primary/20' : 'bg-muted'}`}>
-        <Icon className={`h-6 w-6 ${isHovered ? 'text-primary' : 'text-foreground/80'}`} />
+      <div className={`mb-4 transition-colors ${isHovered ? 'text-primary' : 'text-foreground/80'}`}>
+        <Icon className="h-6 w-6" />
       </div>
       <h3 className="text-xl font-semibold mb-2 transition-colors">{title}</h3>
       <p className="text-foreground/70">{description}</p>
