@@ -1,14 +1,13 @@
-
-import { ArrowUpRight } from 'lucide-react';
-import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { ArrowUpRight } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 const ProductCard = ({
   title,
   description,
   image,
   url,
-  delay = 0
+  delay = 0,
 }: {
   title: string;
   description: string;
@@ -17,12 +16,15 @@ const ProductCard = ({
   delay?: number;
 }) => {
   return (
-    <Card className="overflow-hidden flex flex-col h-full border-border/40 opacity-0 animate-fade-in card-hover" style={{ animationDelay: `${delay}s` }}>
+    <Card
+      className="overflow-hidden flex flex-col h-full border-border/40 opacity-0 animate-fade-in card-hover"
+      style={{ animationDelay: `${delay}s` }}
+    >
       <div className="h-56 overflow-hidden">
-        <img 
-          src={image} 
-          alt={title} 
-          className="w-full h-full object-cover transition-transform duration-700 hover:scale-110" 
+        <img
+          src={image}
+          alt={title}
+          className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
         />
       </div>
       <div className="p-6 flex flex-col flex-grow">
@@ -43,18 +45,20 @@ const ProductsSection = () => {
   const products = [
     {
       title: "Mahasen AI",
-      description: "Manage customer conversations across WhatsApp, Facebook, and Instagram in one unified platform. Streamline your customer communications and boost engagement.",
+      description:
+        "Manage customer conversations across WhatsApp, Facebook, and Instagram in one unified platform. Streamline your customer communications and boost engagement.",
       image: "/images/mahasen-preview.jpg",
-      url: "http://Mahasen47.azynctra.com"
+      url: "http://Mahasen47.azynctra.com",
     },
     {
       title: "Gyma",
-      description: "A SaaS fitness app for guided workouts and progress tracking. Personalized workout plans, real-time analytics, and expert guidance to achieve your fitness goals.",
+      description:
+        "A trending fitness app for guided workouts and progress tracking. Personalized workout plans, real-time analytics, and expert guidance to achieve your fitness goals.",
       image: "/images/gyma-preview.jpg",
-      url: "http://Gyma.azynctra.com"
-    }
+      url: "http://Gyma.azynctra.com",
+    },
   ];
-  
+
   return (
     <section id="products" className="py-24 bg-azynctra-muted/30">
       <div className="section-container">
@@ -63,13 +67,14 @@ const ProductsSection = () => {
             Our <span className="text-gradient">Products</span>
           </h2>
           <p className="text-lg text-foreground/70">
-            Discover our innovative AI-powered products designed to transform businesses and enhance customer experiences.
+            Discover our innovative AI-powered products designed to transform
+            businesses and enhance customer experiences.
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-8">
           {products.map((product, index) => (
-            <ProductCard 
+            <ProductCard
               key={index}
               title={product.title}
               description={product.description}
