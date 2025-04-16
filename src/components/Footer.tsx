@@ -33,7 +33,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo and info */}
           <div className="space-y-4">
-            <img src="/azynctra-logo.png" alt="Azynctra" className="h-10" />
+            <img src="/images/azynctra-logo.png" alt="Azynctra" className="h-10" />
             <p className="text-foreground/60">
               Empowering businesses through intelligent AI solutions and innovative software products.
             </p>

@@ -58,7 +58,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <a href="#home" className="flex items-center">
-              <img src="/azynctra-logo.png" alt="Azynctra" className="h-10" />
+              <img src="/images/azynctra-logo.png" alt="Azynctra" className="h-10" />
             </a>
           </div>
           

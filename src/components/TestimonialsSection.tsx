@@ -46,7 +46,7 @@ const TestimonialsSection = () => {
       author: "Sarah Chen",
       role: "CTO",
       company: "TechVision Inc.",
-      avatar: "/avatar-1.jpg"
+      avatar: "/images/avatar-1.jpg"
     },
     {
       id: 2,
@@ -54,7 +54,7 @@ const TestimonialsSection = () => {
       author: "Michael Rodriguez",
       role: "Data Director",
       company: "Global Analytics",
-      avatar: "/avatar-2.jpg"
+      avatar: "/images/avatar-2.jpg"
     },
     {
       id: 3,
@@ -62,7 +62,7 @@ const TestimonialsSection = () => {
       author: "Amara Johnson",
       role: "Product Manager",
       company: "NextGen Mobile",
-      avatar: "/avatar-3.jpg"
+      avatar: "/images/avatar-3.jpg"
     },
     {
       id: 4,
@@ -70,7 +70,7 @@ const TestimonialsSection = () => {
       author: "David Park",
       role: "Customer Success Lead",
       company: "Elemental Brands",
-      avatar: "/avatar-4.jpg"
+      avatar: "/images/avatar-4.jpg"
     }
   ];
   

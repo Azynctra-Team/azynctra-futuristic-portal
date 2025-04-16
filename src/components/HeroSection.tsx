@@ -8,7 +8,7 @@ const HeroSection = () => {
       {/* Background with overlay and effects */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-radial from-azynctra-muted to-background z-10"></div>
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-5 z-20"></div>
+        <div className="absolute inset-0 bg-[url('/images/grid.svg')] bg-center opacity-5 z-20"></div>
         
         {/* Animated circles for futuristic effect */}
         <div className="absolute bottom-10 left-10 w-72 h-72 bg-azynctra-primary/20 rounded-full filter blur-3xl animate-float"></div>
@@ -46,7 +46,7 @@ const HeroSection = () => {
             <div className="relative">
               {/* Abstract AI visual */}
               <div className="relative w-full h-[400px] overflow-hidden rounded-xl glass animate-glow">
-                <div className="absolute inset-0 bg-[url('/ai-visual.svg')] bg-center bg-no-repeat bg-contain"></div>
+                <div className="absolute inset-0 bg-[url('/images/ai-visual.svg')] bg-center bg-no-repeat bg-contain"></div>
                 <div className="absolute inset-0 bg-gradient-to-br from-azynctra-primary/30 to-azynctra-secondary/30"></div>
               </div>
               

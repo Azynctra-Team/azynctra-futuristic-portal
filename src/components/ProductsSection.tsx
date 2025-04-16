@@ -44,13 +44,13 @@ const ProductsSection = () => {
     {
       title: "Mahasen AI",
       description: "Manage customer conversations across WhatsApp, Facebook, and Instagram in one unified platform. Streamline your customer communications and boost engagement.",
-      image: "/mahasen-preview.jpg",
+      image: "/images/mahasen-preview.jpg",
       url: "http://Mahasen47.azynctra.com"
     },
     {
       title: "Gyma",
       description: "A SaaS fitness app for guided workouts and progress tracking. Personalized workout plans, real-time analytics, and expert guidance to achieve your fitness goals.",
-      image: "/gyma-preview.jpg",
+      image: "/images/gyma-preview.jpg",
       url: "http://Gyma.azynctra.com"
     }
   ];
