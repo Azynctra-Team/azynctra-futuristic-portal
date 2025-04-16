@@ -1,5 +1,6 @@
 
 import { ArrowUpRight } from 'lucide-react';
+import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
 const ProductCard = ({
@@ -16,25 +17,25 @@ const ProductCard = ({
   delay?: number;
 }) => {
   return (
-    <div className="bg-transparent overflow-hidden flex flex-col h-full opacity-0 animate-fade-in transition-all duration-300 hover:translate-y-[-5px]" style={{ animationDelay: `${delay}s` }}>
-      <div className="h-56 overflow-hidden rounded-lg">
+    <Card className="overflow-hidden flex flex-col h-full border-border/40 opacity-0 animate-fade-in card-hover" style={{ animationDelay: `${delay}s` }}>
+      <div className="h-56 overflow-hidden">
         <img 
           src={image} 
           alt={title} 
-          className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" 
+          className="w-full h-full object-cover transition-transform duration-700 hover:scale-110" 
         />
       </div>
       <div className="p-6 flex flex-col flex-grow">
         <h3 className="text-2xl font-semibold mb-3">{title}</h3>
         <p className="text-foreground/70 mb-6 flex-grow">{description}</p>
-        <Button asChild variant="ghost" className="mt-auto group justify-start px-0 hover:bg-transparent">
-          <a href={url} target="_blank" rel="noopener noreferrer" className="flex items-center">
+        <Button asChild className="mt-auto w-full group">
+          <a href={url} target="_blank" rel="noopener noreferrer">
             Visit {title}
             <ArrowUpRight className="ml-2 h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
           </a>
         </Button>
       </div>
-    </div>
+    </Card>
   );
 };
 

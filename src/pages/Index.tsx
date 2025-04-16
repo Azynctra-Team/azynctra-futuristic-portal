@@ -10,7 +10,7 @@ import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
-  // Add scroll animation for elements with opacity-0 class
+  // Add scroll animation for elements with animate-fade-in class
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {

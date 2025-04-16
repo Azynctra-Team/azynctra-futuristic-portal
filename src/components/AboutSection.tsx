@@ -15,7 +15,7 @@ const AboutSection = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="space-y-6 opacity-0 animate-fade-in" style={{animationDelay: '0.3s'}}>
             <div className="flex items-start space-x-4">
               <div className="p-3 rounded-lg bg-azynctra-primary/20 text-primary">
@@ -60,18 +60,22 @@ const AboutSection = () => {
           
           <div className="opacity-0 animate-fade-in" style={{animationDelay: '0.6s'}}>
             <div className="relative">
-              <div className="w-full aspect-square rounded-lg bg-gradient-to-br from-azynctra-primary/10 via-transparent to-azynctra-secondary/10 p-1">
-                <div className="w-full h-full rounded-lg bg-azynctra-muted/30 overflow-hidden flex items-center justify-center">
+              {/* Abstract shape design */}
+              <div className="w-full aspect-square rounded-2xl p-1 bg-gradient-to-br from-azynctra-primary/40 via-azynctra-secondary/40 to-azynctra-accent/40">
+                <div className="w-full h-full rounded-xl bg-azynctra-muted/80 overflow-hidden flex items-center justify-center">
                   <div className="relative w-4/5 h-4/5">
-                    <div className="absolute top-1/4 left-1/4 w-20 h-20 rounded-full bg-azynctra-primary/20 filter blur-xl"></div>
-                    <div className="absolute bottom-1/4 right-1/4 w-24 h-24 rounded-full bg-azynctra-secondary/20 filter blur-xl"></div>
-                    <div className="absolute inset-0 bg-[url('/abstract-pattern.svg')] bg-center bg-no-repeat bg-contain opacity-60"></div>
+                    {/* Abstract pattern */}
+                    <div className="absolute top-0 left-0 w-40 h-40 rounded-full bg-azynctra-primary/30 filter blur-xl"></div>
+                    <div className="absolute bottom-0 right-0 w-40 h-40 rounded-full bg-azynctra-secondary/30 filter blur-xl"></div>
+                    <div className="absolute inset-0 bg-[url('/abstract-pattern.svg')] bg-center bg-no-repeat bg-contain opacity-80"></div>
                   </div>
                 </div>
               </div>
               
-              <div className="absolute top-1/4 -right-3 w-1 h-24 rounded-full bg-gradient-to-b from-azynctra-primary to-azynctra-secondary opacity-70"></div>
-              <div className="absolute -bottom-3 left-1/3 w-24 h-1 rounded-full bg-gradient-to-r from-azynctra-secondary to-azynctra-primary opacity-70"></div>
+              {/* Decorative elements */}
+              <div className="absolute -top-5 -left-5 w-10 h-10 rounded-lg glass"></div>
+              <div className="absolute -bottom-5 -right-5 w-10 h-10 rounded-full glass"></div>
+              <div className="absolute top-1/4 -right-3 w-6 h-32 rounded-full bg-gradient-to-b from-azynctra-primary to-azynctra-secondary opacity-70"></div>
             </div>
           </div>
         </div>

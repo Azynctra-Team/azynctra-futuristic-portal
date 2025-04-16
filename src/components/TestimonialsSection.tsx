@@ -1,6 +1,8 @@
 
-import { Quote } from 'lucide-react';
+import { useState } from 'react';
+import { Card } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Quote } from 'lucide-react';
 
 type Testimonial = {
   id: number;
@@ -13,15 +15,15 @@ type Testimonial = {
 
 const TestimonialCard = ({ testimonial, delay = 0 }: { testimonial: Testimonial; delay?: number }) => {
   return (
-    <div className="p-6 bg-transparent hover:bg-muted/10 transition-colors duration-300 opacity-0 animate-fade-in rounded-lg" style={{ animationDelay: `${delay}s` }}>
-      <div className="mb-4 text-primary/80">
-        <Quote className="h-6 w-6" />
+    <Card className="p-6 border-border/40 opacity-0 animate-fade-in card-hover" style={{ animationDelay: `${delay}s` }}>
+      <div className="mb-4 text-primary">
+        <Quote className="h-8 w-8" />
       </div>
       <blockquote className="text-lg text-foreground/80 mb-6">
         "{testimonial.content}"
       </blockquote>
       <div className="flex items-center">
-        <Avatar className="h-12 w-12">
+        <Avatar className="h-12 w-12 border-2 border-primary/30">
           <AvatarImage src={testimonial.avatar} alt={testimonial.author} />
           <AvatarFallback>{testimonial.author.substring(0, 2)}</AvatarFallback>
         </Avatar>
@@ -30,11 +32,13 @@ const TestimonialCard = ({ testimonial, delay = 0 }: { testimonial: Testimonial;
           <p className="text-sm text-foreground/60">{testimonial.role}, {testimonial.company}</p>
         </div>
       </div>
-    </div>
+    </Card>
   );
 };
 
 const TestimonialsSection = () => {
+  const [activeIndex] = useState(0);
+  
   const testimonials: Testimonial[] = [
     {
       id: 1,
