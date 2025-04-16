@@ -1,7 +1,9 @@
 
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
+import { Switch } from "@/components/ui/switch";
 import { Moon, Sun, Menu, X } from 'lucide-react';
+import { toast } from "sonner";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,20 +26,43 @@ const Navbar = () => {
     };
   }, []);
   
+  // Load theme preference from localStorage on initial render
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    // If there's a saved preference, use it, otherwise use system preference
+    const shouldUseDarkMode = savedTheme === 'dark' || (savedTheme === null && prefersDark);
+    
+    setIsDarkMode(shouldUseDarkMode);
+    
+    if (shouldUseDarkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, []);
+  
   // Toggle dark/light mode
   const toggleDarkMode = () => {
-    if (isDarkMode) {
-      document.documentElement.classList.remove('dark');
-    } else {
+    const newDarkModeValue = !isDarkMode;
+    
+    if (newDarkModeValue) {
       document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+      toast("Dark mode enabled", {
+        position: "bottom-right",
+      });
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+      toast("Light mode enabled", {
+        position: "bottom-right",
+      });
     }
-    setIsDarkMode(!isDarkMode);
+    
+    setIsDarkMode(newDarkModeValue);
   };
-  
-  // Set dark mode by default
-  useEffect(() => {
-    document.documentElement.classList.add('dark');
-  }, []);
 
   const navItems = [
     { name: 'Home', href: '#home' },
@@ -75,13 +100,15 @@ const Navbar = () => {
             ))}
             
             {/* Dark/Light mode toggle */}
-            <button 
-              onClick={toggleDarkMode} 
-              className="p-2 rounded-full hover:bg-muted transition-colors"
-              aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
-            >
-              {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
+            <div className="flex items-center space-x-2">
+              <Sun className="h-4 w-4 text-foreground/70" />
+              <Switch 
+                checked={isDarkMode} 
+                onCheckedChange={toggleDarkMode}
+                aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+              />
+              <Moon className="h-4 w-4 text-foreground/70" />
+            </div>
             
             {/* Contact button */}
             <Button asChild>
@@ -91,13 +118,18 @@ const Navbar = () => {
           
           {/* Mobile menu button */}
           <div className="flex items-center space-x-3 md:hidden">
-            <button 
-              onClick={toggleDarkMode} 
-              className="p-2 rounded-full hover:bg-muted transition-colors"
-              aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
-            >
-              {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
+            {/* Dark/Light mode toggle for mobile */}
+            <div className="flex items-center space-x-1">
+              <Sun className="h-4 w-4 text-foreground/70" />
+              <Switch 
+                checked={isDarkMode} 
+                onCheckedChange={toggleDarkMode}
+                aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+                size="sm"
+              />
+              <Moon className="h-4 w-4 text-foreground/70" />
+            </div>
+            
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 rounded-md text-foreground hover:bg-muted transition-colors"
