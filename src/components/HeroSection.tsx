@@ -45,8 +45,8 @@ const HeroSection = () => {
           <div className="lg:w-1/2 mt-12 lg:mt-0 opacity-0 animate-fade-in" style={{animationDelay: '0.8s'}}>
             <div className="relative">
               {/* Abstract AI visual */}
-              <div className="relative w-full h-[400px] overflow-hidden rounded-xl glass animate-glow">
-                <div className="absolute inset-0 bg-[url('/images/ai-visual.svg')] bg-center bg-no-repeat bg-contain"></div>
+              <div className="relative w-full h-[386px] overflow-hidden rounded-xl glass animate-glow">
+                <div className="absolute inset-0 bg-[url('/0417.gif')] bg-center bg-no-repeat bg-contain"></div>
                 <div className="absolute inset-0 bg-gradient-to-br from-azynctra-primary/30 to-azynctra-secondary/30"></div>
               </div>
               
