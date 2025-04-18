@@ -125,7 +125,7 @@ const Navbar = () => {
                 checked={isDarkMode} 
                 onCheckedChange={toggleDarkMode}
                 aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
-                size="sm"
+                className="scale-75" /* Replace size="sm" with a className that scales the switch */
               />
               <Moon className="h-4 w-4 text-foreground/70" />
             </div>
