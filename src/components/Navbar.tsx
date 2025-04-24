@@ -1,11 +1,18 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Moon, Sun, Menu, X } from "lucide-react";
+import { useTheme } from "next-themes";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(true); // Default to dark mode
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme, resolvedTheme } = useTheme();
+  
+  // Mount check to avoid hydration mismatch
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Handle scroll events to change navbar appearance
   useEffect(() => {
@@ -23,20 +30,13 @@ const Navbar = () => {
     };
   }, []);
 
-  // Toggle dark/light mode
+  // Toggle dark/light mode using next-themes
   const toggleDarkMode = () => {
-    if (isDarkMode) {
-      document.documentElement.classList.remove("dark");
-    } else {
-      document.documentElement.classList.add("dark");
-    }
-    setIsDarkMode(!isDarkMode);
+    setTheme(resolvedTheme === "dark" ? "light" : "dark");
   };
 
-  // Set dark mode by default
-  useEffect(() => {
-    document.documentElement.classList.add("dark");
-  }, []);
+  // Current theme icon - only render after mount to avoid hydration mismatch
+  const ThemeIcon = mounted ? (resolvedTheme === "dark" ? Sun : Moon) : null;
 
   const navItems = [
     { name: "Home", href: "#home" },
@@ -84,10 +84,10 @@ const Navbar = () => {
               onClick={toggleDarkMode}
               className="p-2 rounded-full hover:bg-muted transition-colors"
               aria-label={
-                isDarkMode ? "Switch to light mode" : "Switch to dark mode"
+                resolvedTheme === "dark" ? "Switch to light mode" : "Switch to dark mode"
               }
             >
-              {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
+              {mounted && ThemeIcon && <ThemeIcon size={20} />}
             </button>
 
             {/* Contact button */}
@@ -102,10 +102,10 @@ const Navbar = () => {
               onClick={toggleDarkMode}
               className="p-2 rounded-full hover:bg-muted transition-colors"
               aria-label={
-                isDarkMode ? "Switch to light mode" : "Switch to dark mode"
+                resolvedTheme === "dark" ? "Switch to light mode" : "Switch to dark mode"
               }
             >
-              {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
+              {mounted && ThemeIcon && <ThemeIcon size={20} />}
             </button>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
