@@ -71,7 +71,7 @@ const ServicesSection = () => {
       <div className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-16 opacity-0 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Our <span className="text-gradient">Labs</span>
+            Our <span className="text-gradient">Services</span>
           </h2>
           <p className="text-lg text-foreground/70">
             At Azynctra Labs, we're dedicated to creating innovative solutions that bridge the gap between complex AI technology and practical business applications.

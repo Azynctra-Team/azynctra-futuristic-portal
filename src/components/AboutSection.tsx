@@ -67,7 +67,7 @@ const AboutSection = () => {
                     {/* Abstract pattern */}
                     <div className="absolute top-0 left-0 w-40 h-40 rounded-full bg-azynctra-primary/30 filter blur-xl"></div>
                     <div className="absolute bottom-0 right-0 w-40 h-40 rounded-full bg-azynctra-secondary/30 filter blur-xl"></div>
-                    <div className="absolute inset-0 bg-[url('/images/abstract-pattern.svg')] bg-center bg-no-repeat bg-contain opacity-80"></div>
+                    <div className="absolute inset-0 bg-[url('/images/ai-visual.svg')] bg-center bg-no-repeat bg-contain opacity-80"></div>
                   </div>
                 </div>
               </div>
