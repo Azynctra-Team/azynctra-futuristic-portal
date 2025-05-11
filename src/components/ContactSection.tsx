@@ -67,9 +67,9 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 bg-azynctra-muted/30">
+    <section id="contact" className="py-16 bg-azynctra-muted/30">
       <div className="section-container">
-        <div className="text-center max-w-3xl mx-auto mb-16 opacity-0 animate-fade-in">
+        <div className="text-center max-w-3xl mx-auto mb-12 opacity-0 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Get in <span className="text-gradient">Touch</span>
           </h2>

@@ -78,9 +78,9 @@ const TestimonialsSection = () => {
   ];
   
   return (
-    <section id="testimonials" className="py-24">
+    <section id="testimonials" className="py-16">
       <div className="section-container">
-        <div className="text-center max-w-3xl mx-auto mb-16 scroll-reveal opacity-0 transition-transform duration-700 translate-y-8">
+        <div className="text-center max-w-3xl mx-auto mb-12 scroll-reveal opacity-0 transition-transform duration-700 translate-y-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Client <span className="text-gradient">Testimonials</span>
           </h2>
