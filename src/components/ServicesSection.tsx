@@ -22,7 +22,7 @@ const ServiceCard = ({
       style={{ transitionDelay: `${index * 100}ms` }}
     >
       <Card 
-        className={`p-6 card-hover shadow-lg ${isHovered ? 'bg-gradient-to-br from-azynctra-muted to-background border-primary/40 shadow-azynctra-primary/30' : 'bg-card border-border/40 shadow-azynctra-accent/10'}`}
+        className={`p-6 card-hover shadow-lg h-full ${isHovered ? 'bg-gradient-to-br from-azynctra-muted to-background border-primary/40 shadow-azynctra-primary/30' : 'bg-card border-border/40 shadow-azynctra-accent/10'}`}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
@@ -65,7 +65,7 @@ const ServicesSection = () => {
     },
     {
       title: "Agentic AI Products",
-      description: "Deploy autonomous AI agents that perform complex tasks with minimal human ",
+      description: "Deploy autonomous AI agents that perform complex tasks with minimal human intervention.",
       icon: Bot
     }
   ];
