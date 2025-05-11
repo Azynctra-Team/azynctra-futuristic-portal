@@ -65,7 +65,7 @@ const ServicesSection = () => {
     },
     {
       title: "Agentic AI Products",
-      description: "Deploy autonomous AI agents that perform complex tasks with minimal human intervention.",
+      description: "Deploy autonomous AI agents that perform complex tasks with minimal human ",
       icon: Bot
     }
   ];
