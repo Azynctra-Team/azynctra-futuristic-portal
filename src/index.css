@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -88,7 +89,7 @@
   
   /* Scroll animation classes */
   .scroll-reveal {
-    @apply will-change-transform will-change-opacity;
+    @apply will-change-transform opacity-0 translate-y-8;
   }
   
   .scroll-reveal.animate-in {
