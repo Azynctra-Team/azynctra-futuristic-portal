@@ -13,26 +13,29 @@ type Testimonial = {
   avatar: string;
 };
 
-const TestimonialCard = ({ testimonial, delay = 0 }: { testimonial: Testimonial; delay?: number }) => {
+const TestimonialCard = ({ testimonial, index = 0 }: { testimonial: Testimonial; index?: number }) => {
   return (
-    <Card className="p-6 border-border/40 opacity-0 animate-fade-in card-hover shadow-lg shadow-azynctra-secondary/10 hover:shadow-azynctra-secondary/30" style={{ animationDelay: `${delay}s` }}>
-      <div className="mb-4 text-primary">
-        <Quote className="h-8 w-8" />
-      </div>
-      <blockquote className="text-lg text-foreground/80 mb-6">
-        "{testimonial.content}"
-      </blockquote>
-      <div className="flex items-center">
-        <Avatar className="h-12 w-12 border-2 border-primary/30">
-          <AvatarImage src={testimonial.avatar} alt={testimonial.author} />
-          <AvatarFallback>{testimonial.author.substring(0, 2)}</AvatarFallback>
-        </Avatar>
-        <div className="ml-4">
-          <p className="font-medium">{testimonial.author}</p>
-          <p className="text-sm text-foreground/60">{testimonial.role}, {testimonial.company}</p>
+    <div className="scroll-reveal opacity-0 transition-transform duration-700 translate-y-8" 
+         style={{ transitionDelay: `${index * 150}ms` }}>
+      <Card className="p-6 border-border/40 card-hover shadow-lg shadow-azynctra-secondary/10 hover:shadow-azynctra-secondary/30">
+        <div className="mb-4 text-primary">
+          <Quote className="h-8 w-8" />
         </div>
-      </div>
-    </Card>
+        <blockquote className="text-lg text-foreground/80 mb-6">
+          "{testimonial.content}"
+        </blockquote>
+        <div className="flex items-center">
+          <Avatar className="h-12 w-12 border-2 border-primary/30">
+            <AvatarImage src={testimonial.avatar} alt={testimonial.author} />
+            <AvatarFallback>{testimonial.author.substring(0, 2)}</AvatarFallback>
+          </Avatar>
+          <div className="ml-4">
+            <p className="font-medium">{testimonial.author}</p>
+            <p className="text-sm text-foreground/60">{testimonial.role}, {testimonial.company}</p>
+          </div>
+        </div>
+      </Card>
+    </div>
   );
 };
 
@@ -77,7 +80,7 @@ const TestimonialsSection = () => {
   return (
     <section id="testimonials" className="py-24">
       <div className="section-container">
-        <div className="text-center max-w-3xl mx-auto mb-16 opacity-0 animate-fade-in">
+        <div className="text-center max-w-3xl mx-auto mb-16 scroll-reveal opacity-0 transition-transform duration-700 translate-y-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Client <span className="text-gradient">Testimonials</span>
           </h2>
@@ -91,7 +94,7 @@ const TestimonialsSection = () => {
             <TestimonialCard 
               key={testimonial.id} 
               testimonial={testimonial} 
-              delay={0.3 + index * 0.15}
+              index={index}
             />
           ))}
         </div>

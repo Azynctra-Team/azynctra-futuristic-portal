@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -85,5 +84,14 @@
 
   .card-glow {
     @apply shadow-lg shadow-azynctra-accent/20 hover:shadow-azynctra-accent/40 transition-shadow duration-300;
+  }
+  
+  /* Scroll animation classes */
+  .scroll-reveal {
+    @apply will-change-transform will-change-opacity;
+  }
+  
+  .scroll-reveal.animate-in {
+    @apply opacity-100 translate-y-0 transition-all duration-700 ease-out;
   }
 }

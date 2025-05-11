@@ -10,21 +10,33 @@ import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
-  // Add scroll animation for elements with animate-fade-in class
+  // Enhanced scroll animation for elements with scroll-reveal class
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-fade-in');
-        }
-      });
-    }, { threshold: 0.1 });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          // Add animation classes when element comes into view
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+            // Once animation is triggered, stop observing to prevent re-animation
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { 
+        threshold: 0.15,  // Trigger when 15% of the element is visible
+        rootMargin: '0px 0px -10% 0px'  // Adjust trigger point slightly above bottom viewport
+      }
+    );
     
-    const hiddenElements = document.querySelectorAll('.opacity-0');
-    hiddenElements.forEach(el => observer.observe(el));
+    // Target all scroll-reveal elements
+    const animatedElements = document.querySelectorAll('.scroll-reveal');
+    animatedElements.forEach((el) => observer.observe(el));
     
     return () => {
-      hiddenElements.forEach(el => observer.unobserve(el));
+      if (animatedElements) {
+        animatedElements.forEach((el) => observer.unobserve(el));
+      }
     };
   }, []);
   

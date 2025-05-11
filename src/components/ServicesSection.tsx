@@ -7,28 +7,32 @@ const ServiceCard = ({
   title, 
   description, 
   icon: Icon,
-  delay = 0
+  index = 0
 }: { 
   title: string; 
   description: string; 
   icon: React.ElementType;
-  delay?: number;
+  index?: number;
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   
   return (
-    <Card 
-      className={`p-6 card-hover opacity-0 animate-fade-in shadow-lg ${isHovered ? 'bg-gradient-to-br from-azynctra-muted to-background border-primary/40 shadow-azynctra-primary/30' : 'bg-card border-border/40 shadow-azynctra-accent/10'}`}
-      style={{ animationDelay: `${delay}s` }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+    <div 
+      className={`scroll-reveal opacity-0 transition-transform duration-700 translate-y-8`}
+      style={{ transitionDelay: `${index * 100}ms` }}
     >
-      <div className={`p-3 rounded-lg w-fit mb-4 ${isHovered ? 'bg-primary/20' : 'bg-muted'}`}>
-        <Icon className={`h-6 w-6 ${isHovered ? 'text-primary' : 'text-foreground/80'}`} />
-      </div>
-      <h3 className="text-xl font-semibold mb-2 transition-colors">{title}</h3>
-      <p className="text-foreground/70">{description}</p>
-    </Card>
+      <Card 
+        className={`p-6 card-hover shadow-lg ${isHovered ? 'bg-gradient-to-br from-azynctra-muted to-background border-primary/40 shadow-azynctra-primary/30' : 'bg-card border-border/40 shadow-azynctra-accent/10'}`}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <div className={`p-3 rounded-lg w-fit mb-4 ${isHovered ? 'bg-primary/20' : 'bg-muted'}`}>
+          <Icon className={`h-6 w-6 ${isHovered ? 'text-primary' : 'text-foreground/80'}`} />
+        </div>
+        <h3 className="text-xl font-semibold mb-2 transition-colors">{title}</h3>
+        <p className="text-foreground/70">{description}</p>
+      </Card>
+    </div>
   );
 };
 
@@ -69,7 +73,7 @@ const ServicesSection = () => {
   return (
     <section id="services" className="py-24">
       <div className="section-container">
-        <div className="text-center max-w-3xl mx-auto mb-16 opacity-0 animate-fade-in">
+        <div className="text-center max-w-3xl mx-auto mb-16 scroll-reveal opacity-0 transition-transform duration-700 translate-y-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Our <span className="text-gradient">Services</span>
           </h2>
@@ -85,7 +89,7 @@ const ServicesSection = () => {
               title={service.title}
               description={service.description}
               icon={service.icon}
-              delay={0.2 + index * 0.1}
+              index={index}
             />
           ))}
         </div>
