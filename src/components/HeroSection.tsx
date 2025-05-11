@@ -42,19 +42,19 @@ const HeroSection = () => {
             </div>
           </div>
           
-          <div className="lg:w-1/2 mt-12 lg:mt-0 opacity-0 animate-fade-in" style={{animationDelay: '0.8s'}}>
+          {/* <div className="lg:w-1/2 mt-12 lg:mt-0 opacity-0 animate-fade-in" style={{animationDelay: '0.8s'}}>
             <div className="relative">
-              {/* Abstract AI visual */}
+              
               <div className="relative w-full h-[386px] overflow-hidden rounded-xl glass animate-glow">
                 <div className="absolute inset-0 bg-[url('/0417.gif')] bg-center bg-no-repeat bg-contain"></div>
                 <div className="absolute inset-0 bg-gradient-to-br from-azynctra-primary/30 to-azynctra-secondary/30"></div>
               </div>
               
-              {/* Floating accent elements */}
+              
               <div className="absolute -bottom-6 -right-6 w-24 h-24 rounded-lg bg-azynctra-accent/80 animate-float"></div>
               <div className="absolute -top-6 -left-6 w-16 h-16 rounded-full bg-azynctra-secondary/80 animate-float" style={{animationDelay: '1.5s'}}></div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
