@@ -1,3 +1,4 @@
+
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
@@ -9,7 +10,9 @@ const Card = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "rounded-lg border bg-card text-card-foreground shadow-sm",
+      "rounded-lg border bg-card text-card-foreground shadow-sm relative",
+      "before:absolute before:inset-0 before:-z-10 before:rounded-lg before:bg-gradient-to-r before:from-azynctra-accent/20 before:via-azynctra-primary/10 before:to-azynctra-secondary/20 before:blur-xl before:opacity-70",
+      "hover:before:opacity-100 hover:before:blur-xl transition-all duration-300",
       className
     )}
     {...props}

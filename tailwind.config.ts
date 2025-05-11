@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -105,7 +104,17 @@ export default {
                         boxShadow: '0 0 30px rgba(139, 92, 246, 0.7)'
                     }
                 },
-                float: {
+                'glow-pulse': {
+                    '0%, 100%': { 
+                        opacity: '0.7',
+                        transform: 'scale(1)'
+                    },
+                    '50%': { 
+                        opacity: '1', 
+                        transform: 'scale(1.05)'
+                    }
+                },
+                'float': {
                     '0%': { transform: 'translateY(0px)' },
                     '50%': { transform: 'translateY(-10px)' },
                     '100%': { transform: 'translateY(0px)' }
@@ -118,7 +127,8 @@ export default {
                 'fade-in-delayed': 'fade-in 0.8s ease-out 0.2s forwards',
                 'fade-in-right': 'fade-in-right 0.8s ease-out forwards',
                 'glow': 'glow 2s ease-in-out infinite',
-                'float': 'float 5s ease-in-out infinite'
+                'float': 'float 5s ease-in-out infinite',
+                'glow-pulse': 'glow-pulse 4s ease-in-out infinite'
 			},
             backgroundImage: {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
