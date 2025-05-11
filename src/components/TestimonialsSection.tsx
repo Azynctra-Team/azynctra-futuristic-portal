@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -42,7 +41,7 @@ const TestimonialCard = ({ testimonial, index = 0 }: { testimonial: Testimonial;
 const TestimonialsSection = () => {
   const [activeIndex] = useState(0);
   
-  const testimonials: Testimonial[] = [
+  const testimonials = [
     {
       id: 1,
       content: "Azynctra's AI automation solutions transformed our customer support operations. We've seen a 40% increase in response efficiency while maintaining personalized interactions.",
@@ -94,9 +93,7 @@ const TestimonialsSection = () => {
         <div className="absolute top-1/3 left-[5%] w-40 h-40 border border-primary/10 rounded-full opacity-70 animate-pulse-gentle"></div>
         <div className="absolute bottom-1/4 right-[5%] w-64 h-64 border border-secondary/10 rounded-full opacity-70 animate-float"></div>
         
-        {/* Animated glowing blobs */}
-        <div className="absolute -top-20 left-1/4 w-96 h-96 glow-blob blob-primary animate-drift"></div>
-        <div className="absolute -bottom-40 right-1/4 w-96 h-96 glow-blob blob-secondary animate-pulse-gentle delay-2"></div>
+        {/* Remove animated glowing blobs */}
       </div>
       
       <div className="section-container relative z-10">

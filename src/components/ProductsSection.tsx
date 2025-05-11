@@ -1,4 +1,3 @@
-
 import { ArrowUpRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -65,7 +64,7 @@ const ProductsSection = () => {
       {/* Tech-inspired background with subtle grid */}
       <div className="absolute inset-0 bg-grid opacity-[0.03] dark:opacity-[0.07] pointer-events-none"></div>
       
-      {/* Animated glowing elements */}
+      {/* Animated technical elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
         {/* Circuit-like paths */}
         <div className="absolute top-1/4 left-0 w-1/2 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
@@ -79,9 +78,7 @@ const ProductsSection = () => {
         <div className="absolute top-10 right-[10%] w-2 h-2 rounded-full bg-accent/30 animate-pulse-gentle delay-2"></div>
         <div className="absolute top-1/2 left-[25%] w-2 h-2 rounded-full bg-primary/30 animate-pulse-gentle delay-3"></div>
         
-        {/* Glowing blobs */}
-        <div className="absolute top-1/3 left-1/5 w-96 h-96 glow-blob blob-secondary animate-float-horizontal delay-2"></div>
-        <div className="absolute bottom-1/4 right-1/6 w-80 h-80 glow-blob blob-accent animate-pulse-gentle"></div>
+        {/* Remove glowing blobs */}
       </div>
 
       <div className="section-container relative z-10">

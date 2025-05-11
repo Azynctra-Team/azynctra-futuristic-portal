@@ -1,4 +1,3 @@
-
 import { Facebook, Linkedin, Mail, Phone, MapPin, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -84,9 +83,7 @@ const ContactSection = () => {
           <div className="absolute bottom-10 right-10 w-1/2 h-1/2 border-r border-b border-primary/5 rounded-br-3xl"></div>
         </div>
         
-        {/* Animated blobs */}
-        <div className="absolute -top-40 right-1/4 w-96 h-96 glow-blob blob-accent animate-pulse-gentle"></div>
-        <div className="absolute -bottom-20 left-1/3 w-80 h-80 glow-blob blob-primary animate-float delay-1"></div>
+        {/* Remove animated blobs */}
       </div>
 
       <div className="section-container relative z-10">

@@ -1,4 +1,3 @@
-
 import { Target, Code, ChevronRight } from 'lucide-react';
 
 const AboutSection = () => {
@@ -6,10 +5,7 @@ const AboutSection = () => {
     <section id="about" className="section-with-bg py-16 dark:bg-azynctra-muted/30 bg-gradient-light dark:bg-gradient-dark">
       <div className="absolute inset-0 bg-grid opacity-[0.03] dark:opacity-[0.07] pointer-events-none"></div>
       
-      {/* Animated background blobs */}
-      <div className="absolute top-1/4 left-1/4 w-64 h-64 glow-blob blob-primary animate-pulse-gentle"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 glow-blob blob-secondary animate-pulse-gentle delay-2"></div>
-      <div className="absolute bottom-1/3 left-1/3 w-72 h-72 glow-blob blob-accent animate-float delay-3"></div>
+      {/* Remove animated background blobs */}
       
       <div className="section-container relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-12 opacity-0 animate-fade-in">
