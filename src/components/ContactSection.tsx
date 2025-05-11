@@ -67,8 +67,29 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-16 bg-azynctra-muted/30">
-      <div className="section-container">
+    <section id="contact" className="section-with-bg py-16 dark:bg-azynctra-muted/30 bg-gradient-light dark:bg-gradient-dark">
+      {/* Tech-inspired background elements */}
+      <div className="absolute inset-0 bg-grid opacity-[0.03] dark:opacity-[0.07] pointer-events-none"></div>
+      
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Geometric tech patterns */}
+        <div className="absolute top-0 right-0 w-2/5 h-2/5">
+          <div className="w-full h-full border-l border-t border-primary/5 rounded-tl-3xl"></div>
+          <div className="absolute top-10 left-10 w-1/2 h-1/2 border-l border-t border-secondary/5 rounded-tl-3xl"></div>
+        </div>
+        
+        <div className="absolute bottom-0 left-0 w-2/5 h-2/5">
+          <div className="w-full h-full border-r border-b border-secondary/5 rounded-br-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-1/2 h-1/2 border-r border-b border-primary/5 rounded-br-3xl"></div>
+        </div>
+        
+        {/* Animated blobs */}
+        <div className="absolute -top-40 right-1/4 w-96 h-96 glow-blob blob-accent animate-pulse-gentle"></div>
+        <div className="absolute -bottom-20 left-1/3 w-80 h-80 glow-blob blob-primary animate-float delay-1"></div>
+      </div>
+
+      <div className="section-container relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-12 opacity-0 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Get in <span className="text-gradient">Touch</span>
@@ -80,7 +101,7 @@ const ContactSection = () => {
 
         <div className="grid lg:grid-cols-5 gap-8">
           <div className="lg:col-span-2 space-y-8 opacity-0 animate-fade-in" style={{animationDelay: '0.3s'}}>
-            <Card className="p-6 border-border/40">
+            <Card className="p-6 border-border/40 bg-card/80 backdrop-blur-sm">
               <h3 className="text-xl font-semibold mb-4">Connect With Us</h3>
               
               <div className="space-y-4">
@@ -118,7 +139,7 @@ const ContactSection = () => {
           </div>
 
           <div className="lg:col-span-3 opacity-0 animate-fade-in" style={{animationDelay: '0.6s'}}>
-            <Card className="p-6 border-border/40">
+            <Card className="p-6 border-border/40 bg-card/80 backdrop-blur-sm">
               <h3 className="text-xl font-semibold mb-4">Send Us a Message</h3>
               
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -134,6 +155,7 @@ const ContactSection = () => {
                       value={formState.name}
                       onChange={handleChange}
                       required
+                      className="bg-background/50 backdrop-blur-sm"
                     />
                   </div>
                   <div className="space-y-2">
@@ -148,6 +170,7 @@ const ContactSection = () => {
                       value={formState.email}
                       onChange={handleChange}
                       required
+                      className="bg-background/50 backdrop-blur-sm"
                     />
                   </div>
                 </div>
@@ -163,6 +186,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     rows={5}
+                    className="bg-background/50 backdrop-blur-sm"
                   />
                 </div>
                 <Button type="submit" className="w-full">

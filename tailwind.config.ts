@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -118,6 +119,16 @@ export default {
                     '0%': { transform: 'translateY(0px)' },
                     '50%': { transform: 'translateY(-10px)' },
                     '100%': { transform: 'translateY(0px)' }
+                },
+                'pulse-blob': {
+                    '0%, 100%': { transform: 'scale(1)', opacity: '0.3' },
+                    '50%': { transform: 'scale(1.1)', opacity: '0.5' }
+                },
+                'drift': {
+                    '0%, 100%': { transform: 'translate(0, 0)' },
+                    '25%': { transform: 'translate(5px, 10px)' },
+                    '50%': { transform: 'translate(10px, -5px)' },
+                    '75%': { transform: 'translate(-5px, -10px)' }
                 }
 			},
 			animation: {
@@ -128,11 +139,14 @@ export default {
                 'fade-in-right': 'fade-in-right 0.8s ease-out forwards',
                 'glow': 'glow 2s ease-in-out infinite',
                 'float': 'float 5s ease-in-out infinite',
-                'glow-pulse': 'glow-pulse 4s ease-in-out infinite'
+                'glow-pulse': 'glow-pulse 4s ease-in-out infinite',
+                'pulse-blob': 'pulse-blob 10s ease-in-out infinite',
+                'drift': 'drift 20s ease-in-out infinite'
 			},
             backgroundImage: {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-                'hero-pattern': 'url("/pattern-bg.png")'
+                'hero-pattern': 'url("/pattern-bg.png")',
+                'grid-pattern': 'url("/images/grid.svg")'
             }
 		}
 	},

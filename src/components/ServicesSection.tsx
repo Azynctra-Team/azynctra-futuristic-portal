@@ -71,8 +71,23 @@ const ServicesSection = () => {
   ];
   
   return (
-    <section id="services" className="py-16">
-      <div className="section-container">
+    <section id="services" className="section-with-bg py-16 relative">
+      {/* Animated tech-inspired background elements */}
+      <div className="absolute inset-0 bg-grid opacity-[0.02] dark:opacity-[0.05] pointer-events-none"></div>
+      
+      <div className="absolute w-full h-full overflow-hidden">
+        {/* Abstract geometric shapes */}
+        <div className="absolute top-10 right-[10%] w-64 h-64 border border-primary/5 rounded-full"></div>
+        <div className="absolute bottom-40 left-[5%] w-96 h-96 border border-secondary/5 rounded-full"></div>
+        <div className="absolute top-1/2 left-1/4 w-32 h-32 border-t border-l border-accent/10 transform rotate-45 opacity-50 animate-float-horizontal"></div>
+        <div className="absolute bottom-1/3 right-1/3 w-40 h-40 border-b border-r border-primary/10 transform -rotate-12 opacity-50 animate-float delay-1"></div>
+        
+        {/* Animated glowing blobs */}
+        <div className="absolute top-20 left-[10%] w-96 h-96 glow-blob blob-secondary animate-pulse-gentle delay-1"></div>
+        <div className="absolute bottom-40 right-[15%] w-80 h-80 glow-blob blob-primary animate-float delay-2"></div>
+      </div>
+      
+      <div className="section-container relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-12 scroll-reveal opacity-0 transition-transform duration-700 translate-y-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Our <span className="text-gradient">Services</span>

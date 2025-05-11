@@ -78,8 +78,28 @@ const TestimonialsSection = () => {
   ];
   
   return (
-    <section id="testimonials" className="py-16">
-      <div className="section-container">
+    <section id="testimonials" className="section-with-bg py-16 relative">
+      {/* Futuristic background elements */}
+      <div className="absolute inset-0 bg-grid opacity-[0.02] dark:opacity-[0.05] pointer-events-none"></div>
+      
+      {/* Animated tech patterns */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Abstract tech lines */}
+        <div className="absolute top-0 left-[25%] right-[25%] h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+        <div className="absolute bottom-0 left-[15%] right-[15%] h-px bg-gradient-to-r from-transparent via-secondary/20 to-transparent"></div>
+        <div className="absolute top-20 bottom-20 left-[10%] w-px bg-gradient-to-b from-transparent via-accent/20 to-transparent"></div>
+        <div className="absolute top-40 bottom-40 right-[10%] w-px bg-gradient-to-b from-transparent via-primary/20 to-transparent"></div>
+        
+        {/* Geometric shapes */}
+        <div className="absolute top-1/3 left-[5%] w-40 h-40 border border-primary/10 rounded-full opacity-70 animate-pulse-gentle"></div>
+        <div className="absolute bottom-1/4 right-[5%] w-64 h-64 border border-secondary/10 rounded-full opacity-70 animate-float"></div>
+        
+        {/* Animated glowing blobs */}
+        <div className="absolute -top-20 left-1/4 w-96 h-96 glow-blob blob-primary animate-drift"></div>
+        <div className="absolute -bottom-40 right-1/4 w-96 h-96 glow-blob blob-secondary animate-pulse-gentle delay-2"></div>
+      </div>
+      
+      <div className="section-container relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-12 scroll-reveal opacity-0 transition-transform duration-700 translate-y-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Client <span className="text-gradient">Testimonials</span>

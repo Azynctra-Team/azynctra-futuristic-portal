@@ -61,8 +61,30 @@ const ProductsSection = () => {
   ];
 
   return (
-    <section id="products" className="py-16 bg-azynctra-muted/30">
-      <div className="section-container">
+    <section id="products" className="section-with-bg py-16 dark:bg-azynctra-muted/30 bg-gradient-light dark:bg-gradient-dark">
+      {/* Tech-inspired background with subtle grid */}
+      <div className="absolute inset-0 bg-grid opacity-[0.03] dark:opacity-[0.07] pointer-events-none"></div>
+      
+      {/* Animated glowing elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+        {/* Circuit-like paths */}
+        <div className="absolute top-1/4 left-0 w-1/2 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+        <div className="absolute top-2/3 right-0 w-1/3 h-px bg-gradient-to-l from-transparent via-secondary/20 to-transparent"></div>
+        <div className="absolute right-[10%] top-10 bottom-10 w-px bg-gradient-to-b from-transparent via-accent/20 to-transparent"></div>
+        <div className="absolute left-[25%] top-1/2 bottom-0 w-px bg-gradient-to-b from-primary/20 to-transparent"></div>
+        
+        {/* Animated node points */}
+        <div className="absolute top-1/4 left-0 w-2 h-2 rounded-full bg-primary/30 animate-pulse-gentle"></div>
+        <div className="absolute top-2/3 right-0 w-2 h-2 rounded-full bg-secondary/30 animate-pulse-gentle delay-1"></div>
+        <div className="absolute top-10 right-[10%] w-2 h-2 rounded-full bg-accent/30 animate-pulse-gentle delay-2"></div>
+        <div className="absolute top-1/2 left-[25%] w-2 h-2 rounded-full bg-primary/30 animate-pulse-gentle delay-3"></div>
+        
+        {/* Glowing blobs */}
+        <div className="absolute top-1/3 left-1/5 w-96 h-96 glow-blob blob-secondary animate-float-horizontal delay-2"></div>
+        <div className="absolute bottom-1/4 right-1/6 w-80 h-80 glow-blob blob-accent animate-pulse-gentle"></div>
+      </div>
+
+      <div className="section-container relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-12 opacity-0 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Our <span className="text-gradient">Products</span>
