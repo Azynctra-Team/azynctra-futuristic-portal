@@ -1,3 +1,4 @@
+
 import { ArrowUpRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -17,7 +18,7 @@ const ProductCard = ({
 }) => {
   return (
     <Card
-      className="overflow-hidden flex flex-col h-full border-border/40 opacity-0 animate-fade-in card-hover"
+      className="overflow-hidden flex flex-col h-full border-border/40 opacity-0 animate-fade-in card-hover shadow-lg shadow-azynctra-accent/10 hover:shadow-azynctra-accent/30"
       style={{ animationDelay: `${delay}s` }}
     >
       <div className="h-56 overflow-hidden">

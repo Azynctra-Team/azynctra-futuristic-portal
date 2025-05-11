@@ -18,7 +18,7 @@ const ServiceCard = ({
   
   return (
     <Card 
-      className={`p-6 card-hover opacity-0 animate-fade-in ${isHovered ? 'bg-gradient-to-br from-azynctra-muted to-background border-primary/40' : 'bg-card border-border/40'}`}
+      className={`p-6 card-hover opacity-0 animate-fade-in shadow-lg ${isHovered ? 'bg-gradient-to-br from-azynctra-muted to-background border-primary/40 shadow-azynctra-primary/30' : 'bg-card border-border/40 shadow-azynctra-accent/10'}`}
       style={{ animationDelay: `${delay}s` }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}

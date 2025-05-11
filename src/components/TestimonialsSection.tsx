@@ -15,7 +15,7 @@ type Testimonial = {
 
 const TestimonialCard = ({ testimonial, delay = 0 }: { testimonial: Testimonial; delay?: number }) => {
   return (
-    <Card className="p-6 border-border/40 opacity-0 animate-fade-in card-hover" style={{ animationDelay: `${delay}s` }}>
+    <Card className="p-6 border-border/40 opacity-0 animate-fade-in card-hover shadow-lg shadow-azynctra-secondary/10 hover:shadow-azynctra-secondary/30" style={{ animationDelay: `${delay}s` }}>
       <div className="mb-4 text-primary">
         <Quote className="h-8 w-8" />
       </div>
