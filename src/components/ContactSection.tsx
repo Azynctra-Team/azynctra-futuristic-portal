@@ -92,7 +92,7 @@ const ContactSection = () => {
             Get in <span className="text-gradient">Touch</span>
           </h2>
           <p className="text-lg text-foreground/70">
-            Have a question or want to work together? Reach out to us.
+            Have a question about Mahasen AI? Reach out to our team—we'd love to help you experience digital liberation.
           </p>
         </div>
 
@@ -178,7 +178,7 @@ const ContactSection = () => {
                   <Textarea
                     id="message"
                     name="message"
-                    placeholder="Tell us about your project or inquiry..."
+                    placeholder="How can Mahasen AI help you?"
                     value={formState.message}
                     onChange={handleChange}
                     required

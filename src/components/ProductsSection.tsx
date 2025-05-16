@@ -46,21 +46,14 @@ const ProductsSection = () => {
     {
       title: "Mahasen AI",
       description:
-        "Manage customer conversations across WhatsApp, Facebook, and Instagram in one unified platform. Streamline your customer communications and boost engagement.",
+        "Mahasen AI is your intelligent digital twin—a personal AI that learns your style, shields you from digital overwhelm, and handles routine communications so you can focus on what truly matters. Experience digital liberation and reclaim your time.",
       image: "/images/mahasen-preview.jpg",
       url: "http://Mahasen47.azynctra.com",
-    },
-    {
-      title: "Gyma",
-      description:
-        "A trending fitness app for guided workouts and progress tracking. Personalized workout plans, real-time analytics, and expert guidance to achieve your fitness goals.",
-      image: "/images/gyma-preview.jpg",
-      url: "http://Gyma.azynctra.com",
     },
   ];
 
   return (
-    <section id="products" className="section-with-bg py-16 dark:bg-azynctra-muted/30 bg-gradient-light dark:bg-gradient-dark">
+    <section id="products" className="section-with-bg py-16 bg-background">
       {/* Tech-inspired background with subtle grid */}
       <div className="absolute inset-0 bg-grid opacity-[0.03] dark:opacity-[0.07] pointer-events-none"></div>
       
@@ -84,11 +77,10 @@ const ProductsSection = () => {
       <div className="section-container relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-12 opacity-0 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Our <span className="text-gradient">Products</span>
+            Introducing <span className="text-gradient">Mahasen AI</span>
           </h2>
           <p className="text-lg text-foreground/70">
-            Discover our innovative AI-powered products designed to transform
-            businesses and enhance customer experiences.
+            Mahasen AI is the only product we build—your digital shield in an accelerating world. No more digital chaos. Just you, your time, and your priorities.
           </p>
         </div>
 

@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -54,13 +53,13 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
                 azynctra: {
-                    DEFAULT: '#1E1E2F',
+                    DEFAULT: '#162032',
                     foreground: '#ffffff',
-                    primary: '#7E69AB',
-                    secondary: '#1EAEDB',
-                    accent: '#8B5CF6',
-                    muted: '#1A1F2C',
-                    border: '#221F26'
+                    primary: '#1A2A40',
+                    secondary: '#1DB954',
+                    accent: '#21e38c',
+                    muted: '#22304a',
+                    border: '#22304a'
                 }
 			},
 			borderRadius: {

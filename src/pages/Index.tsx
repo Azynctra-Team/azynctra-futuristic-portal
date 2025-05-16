@@ -1,13 +1,10 @@
-
 import { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
-import ServicesSection from '@/components/ServicesSection';
-import ProductsSection from '@/components/ProductsSection';
-import TestimonialsSection from '@/components/TestimonialsSection';
-import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
+// TODO: import MissionSection from '@/components/MissionSection';
+import ProductsSection from '@/components/ProductsSection';
 
 const Index = () => {
   // Enhanced scroll animation for elements with scroll-reveal class
@@ -45,11 +42,9 @@ const Index = () => {
       <Navbar />
       <main>
         <HeroSection />
-        <AboutSection />
-        <ServicesSection />
-        <ProductsSection />
-        <TestimonialsSection />
-        <ContactSection />
+         <AboutSection />
+        {/* <MissionSection /> */}
+        {/* <ProductsSection /> */}
       </main>
       <Footer />
     </div>

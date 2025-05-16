@@ -44,35 +44,27 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       id: 1,
-      content: "Azynctra's AI automation solutions transformed our customer support operations. We've seen a 40% increase in response efficiency while maintaining personalized interactions.",
+      content: "Mahasen AI has completely changed how I handle digital communications. My inbox is finally under control, and I only see what truly matters. It's like having a second brain that knows exactly what I need.",
       author: "Sarah Chen",
-      role: "CTO",
-      company: "TechVision Inc.",
+      role: "Productivity Coach",
+      company: "FocusFlow",
       avatar: "/images/avatar-1.jpg"
     },
     {
       id: 2,
-      content: "The data science team at Azynctra helped us extract actionable insights from our massive datasets. Their custom analytics dashboards have become essential to our decision-making process.",
+      content: "With Mahasen AI, I reclaimed hours every week. It responds to routine emails and messages just like I would, so I can focus on my real priorities.",
       author: "Michael Rodriguez",
-      role: "Data Director",
-      company: "Global Analytics",
+      role: "Entrepreneur",
+      company: "Self-Employed",
       avatar: "/images/avatar-2.jpg"
     },
     {
       id: 3,
-      content: "Working with Azynctra on our mobile app development was seamless. They delivered a polished product ahead of schedule, with intuitive UX and powerful backend integration.",
+      content: "I was skeptical, but Mahasen AI really does feel like a digital twin. It filters out the noise and only brings me what matters most. Total digital liberation!",
       author: "Amara Johnson",
-      role: "Product Manager",
-      company: "NextGen Mobile",
+      role: "Writer & Creator",
+      company: "Independent",
       avatar: "/images/avatar-3.jpg"
-    },
-    {
-      id: 4,
-      content: "Implementing Mahasen AI has unified our customer communications across platforms. The analytics and automation features have saved our team countless hours of manual work.",
-      author: "David Park",
-      role: "Customer Success Lead",
-      company: "Elemental Brands",
-      avatar: "/images/avatar-4.jpg"
     }
   ];
   
@@ -99,10 +91,10 @@ const TestimonialsSection = () => {
       <div className="section-container relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-12 scroll-reveal opacity-0 transition-transform duration-700 translate-y-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Client <span className="text-gradient">Testimonials</span>
+            What <span className="text-gradient">Users Say</span>
           </h2>
           <p className="text-lg text-foreground/70">
-            Don't take our word for it - hear what our clients have to say about working with Azynctra.
+            Hear how Mahasen AI is transforming digital lives and giving people back their time.
           </p>
         </div>
         

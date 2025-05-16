@@ -2,7 +2,7 @@ import { Target, Code, ChevronRight } from 'lucide-react';
 
 const AboutSection = () => {
   return (
-    <section id="about" className="section-with-bg py-16 dark:bg-azynctra-muted/30 bg-gradient-light dark:bg-gradient-dark">
+    <section id="about" className="section-with-bg py-16 bg-background">
       <div className="absolute inset-0 bg-grid opacity-[0.03] dark:opacity-[0.07] pointer-events-none"></div>
       
       {/* Remove animated background blobs */}
@@ -10,14 +10,15 @@ const AboutSection = () => {
       <div className="section-container relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-12 opacity-0 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Company <span className="text-gradient">Overview</span>
+            Our <span className="text-gradient">Mission</span>
           </h2>
           <p className="text-lg text-foreground/70">
-            Azynctra is a forward-thinking technology company focused on delivering 
-            AI-powered software products and services that transform how businesses operate.
+            We believe life shouldn't be consumed by endless notifications and digital noise. Our mission is to build your perfect digital twin—an AI that knows you so well it can act on your behalf, shielding you from distractions and giving you back control of your time and attention. Mahasen AI is designed to respond as you would, handle routine communications, and only bring truly important matters to your attention. We're building the future of digital liberation.
           </p>
         </div>
-        
+        <div className="h-24" /> 
+        <div className="h-24" />
+        <div className="h-24" />
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="space-y-6 opacity-0 animate-fade-in" style={{animationDelay: '0.3s'}}>
             <div className="flex items-start space-x-4">
@@ -27,8 +28,7 @@ const AboutSection = () => {
               <div>
                 <h3 className="text-xl font-semibold mb-2">Our Vision</h3>
                 <p className="text-foreground/70">
-                  To be at the forefront of AI innovation, creating intelligent solutions 
-                  that solve complex business problems and drive meaningful change.
+                  To give people back their most precious resource: time. In a world overwhelmed by digital demands, Mahasen AI will be the essential shield for anyone who wants to focus on what truly matters.
                 </p>
               </div>
             </div>
@@ -38,27 +38,12 @@ const AboutSection = () => {
                 <Code className="h-6 w-6" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Our Approach</h3>
+                <h3 className="text-xl font-semibold mb-2">Why Mahasen AI?</h3>
                 <p className="text-foreground/70">
-                  We combine cutting-edge AI technology with deep industry expertise 
-                  to deliver solutions that are not just intelligent, but also practical and scalable.
+                  Mahasen AI learns your communication style, manages your digital life, and lets you reclaim your attention. It's not just an assistant—it's your intelligent digital twin.
                 </p>
               </div>
             </div>
-            
-            <ul className="space-y-2 pl-10">
-              {[
-                "Customized AI solutions for unique business needs",
-                "Ethical AI development with transparent practices",
-                "Continuous innovation and research",
-                "Client-centered approach with ongoing support"
-              ].map((item, index) => (
-                <li key={index} className="flex items-center space-x-2">
-                  <ChevronRight className="h-4 w-4 text-primary" />
-                  <span className="text-foreground/70">{item}</span>
-                </li>
-              ))}
-            </ul>
           </div>
           
           <div className="opacity-0 animate-fade-in" style={{animationDelay: '0.6s'}}>
